@@ -1,0 +1,243 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affidavit Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <style>
+        p {
+            text-align:justify;
+        }
+     	@media print {
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 10mm;
+                padding: 10mm;
+                
+            }
+            .download-button {
+                display: none;
+            }
+            .input-text {
+                border-bottom:none;
+            }
+        }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin:auto;
+            padding: 30px;
+            background-color: #f5f5f5;
+            width: 20cm;
+            height: 25.5cm;
+            box-sizing:inherit;
+            font-size: 18px;
+        }
+        
+        
+        li{
+            border: none;
+            border-bottom:none;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .signature {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        .download-button {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        button {
+            background-color: #60a1e3ec;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor:pointer;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        button:hover {
+            background-color: #60a2e3;
+        }
+        @page {
+            size: A4;
+            margin: 4;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 0px;
+            font-size: 18px;
+            max-width: 50%;
+           
+           
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <p>
+            JPN/CONS/WIS1/202…./…….
+        </p>
+        <p>
+            <h2 style="text-align:center"><u>AFFIDIVIT</u>
+        </h2>
+    </p>
+        <p style="text-align:justify">
+            <div>
+	    I 
+                <span id="fullname" class="input-text bold"></span> 
+            of, 
+                <span id="address" class="input-text bold"></span>
+            being a Sri Lankan citizen do hereby solemnly, sincerely, and truly declare 
+           and affirm as follows:<br>
+           <ol> 
+        <li>
+            <p style="text-align:justify">
+            I am the Declarant above named.
+        </p>
+    </li>
+        <li>
+        <p style="text-align:justify">
+            I have been currently living in the above address in Japan.
+        </p>
+    </li>
+        <li>
+        <p style="text-align:justify">
+            I am a Sri Lankan Citizen who possesses the Sri Lankan passport bearing No:
+                <span id="passportnumber" class="input-text bold"></span>
+            issued on
+                <span id="passportissueddate" class="input-text bold"></span>
+            and bone on 
+                <span id="birthday" class="input-text bold"></span>
+            .
+        </p>
+    </li>
+        <li>
+        <p style="text-align:justify">
+            I firmly declare that the above information is true and accurate.
+        </p>
+	 </div>
+	 </div>
+	</li>
+    </ol>
+	</div></div></div>
+	
+        <p style="text-align:justify;margin-top: 100px;">
+            Signature of <span id="fullname3" class="input-text bold"></span>
+        </p>
+        <div class="footer">
+            <table style="margin-top: -50px;">
+                <tr>
+                    <td>
+                        <p style="text-align:justify">
+                            <br>
+                            The foregoing affidavit having being read by the affirmant who understood
+                            the contents and the affect thereof, was affirmed at the Sri Lanka Embassy
+                            in Tokyo on this 
+                                <span id="appointmentdate" class="input-text bold"></span>
+                            and signed before me.
+                        </p>
+                    </td>
+                    <td>
+                        <div id="CurlyBracket">
+                            <p>
+                                <td>
+                                    <div id="CurlyBracket">
+                                        <p>
+                                            <td>
+                                                <div id="CurlyBracket">
+                                                    <p>
+                                                        <span style="font-size: 780%; font-weight: 100; font-family: 'Roboto', sans-serif;">}</span>
+                                                    </p>
+                                                </div>
+                                            </td>                                        </p>
+                                    </div>
+                                </td>
+                                                            </p>
+                        </div>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        <div>
+        <div class="download-button">
+            <button onclick="history.back()">Back</button>
+            <button onclick="saveAsPDF()">Download</button>
+        </div>
+
+            <footer style="text-align: center; margin-top: 20px; font-size: 14px; color: #555;">
+            
+        </footer>
+        </div>
+        
+        <script>
+            const FullName = localStorage.getItem('fullname');
+	        const FullName3 = localStorage.getItem('fullname3');
+            const Address = localStorage.getItem('address');
+            const PassportNumber = localStorage.getItem('passportnumber');
+            const PassportIssuedDate = localStorage.getItem('passportissueddate');
+            const Birthday = localStorage.getItem('birthday');
+            const AppointmentDate = localStorage.getItem('appointmentdate');
+           
+            document.getElementById('fullname').textContent = FullName;
+	        document.getElementById('fullname3').textContent = FullName3;
+            document.getElementById('address').textContent = Address;
+            document.getElementById('passportnumber').textContent = PassportNumber;
+            document.getElementById('passportissueddate').textContent = dateConveter(PassportIssuedDate);
+            document.getElementById('birthday').textContent = dateConveter(Birthday);
+            document.getElementById('appointmentdate').textContent = dateConveter(AppointmentDate);
+
+	    function saveAsPDF() {
+            	const emptyFields = document.querySelectorAll('[contenteditable="true"]:empty');
+            	if (emptyFields.length > 0) {
+                alert("Please fill out all fields before printing.");
+                return;
+            }
+            window.print();
+        }
+
+        function dateConveter(date) {
+    // date is look like this 1987-03-11 convert it into 11th March, 1987
+    const dateObj = new Date(date);
+    const month = dateObj.toLocaleString('default', { month: 'long' });
+    const day = dateObj.getDate();
+    const year = dateObj.getFullYear();
+
+    function getDaySuffix(day) {
+        if (day > 3 && day < 21) return 'th'; // 4th to 20th
+        switch (day % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
+    }
+
+    const daySuffix = getDaySuffix(day);
+    return `${day}${daySuffix} ${month}, ${year}`;
+}
+
+        </script>
+    </body>
+</html>
