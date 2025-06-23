@@ -204,7 +204,7 @@ More actions
             document.getElementById('passportnumber').textContent = PassportNumber;
             document.getElementById('passportissueddate').textContent = dateConveter(PassportIssuedDate);
             document.getElementById('birthday').textContent = dateConveter(Birthday);
-            document.getElementById('appointmentdate').textContent = dateConveter(AppointmentDate);
+            document.getElementById('appointmentdate').textContent = '......./....../......'; //
 
 	    function saveAsPDF() {
             	const emptyFields = document.querySelectorAll('[contenteditable="true"]:empty');
